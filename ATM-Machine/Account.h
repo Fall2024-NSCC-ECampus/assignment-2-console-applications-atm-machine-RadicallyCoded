@@ -11,6 +11,10 @@ void createAccount();
 bool loggingIn();
 bool checkUser();
 
+void withdraw();
+void deposit();
+void requestBalance();
+
 class Account {
 
 };

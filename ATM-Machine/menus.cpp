@@ -27,10 +27,22 @@ void printMainMenu() {
     cout << "w -> Withdraw Money" << endl;
     cout << "r -> Request Balance" << endl;
     cout << "q -> Quit" << endl;
-    cout << "> " << endl;
-    //cin >> menuInput;
+    cout << "> ";
+    cin >> menuInput;
 
-    cout << "This will be functional in Part B of the assignment!\n";
+    if (menuInput == 'D' || menuInput == 'd') {
+        deposit();
+    } else if (menuInput == 'W' || menuInput == 'w') {
+        withdraw();
+    } else if (menuInput == 'R' || menuInput == 'r') {
+        requestBalance();
+    } else if (menuInput == 'Q' || menuInput == 'q') {
+        quit();
+    } else {
+        cout << "\n";
+        cout << "Error : Invalid input. Please try again.\n" << endl;
+        start();
+    }
 }
 
 void start() {
